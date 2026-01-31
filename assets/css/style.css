@@ -3,86 +3,250 @@ body, html {
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-ul { list-style: none; padding-left: 5px; }
-a { color:blue; text-decoration: none;}
-.bar {
-    background-color: #f9f9fb;
-    padding:15px;
-    border-top: solid 1px #cdcdcd;
-    border-bottom: solid 1px #cdcdcd;
+
+h1{
+    color: #032353b9;
 }
-.content {
+
+ul { 
+    list-style: none; 
+    padding-left: 5px;  
+}
+
+a, li {
+    color:rgb(3, 3, 94); 
+    text-decoration: none;
+}
+    
+.contentmain {
     max-width: 1440px;
-    margin: auto;
-    grid-gap: 3rem;
+    margin: 0;
     display: grid;
-    gap: 3rem;
-    grid-template-areas: "sidebar main anchors";
-    grid-template-columns: minmax(0,15rem) minmax(0,2.5fr) minmax(0,15rem);
-    padding-left: 1rem;
-    padding-right: 1rem;
+    grid-template-columns: minmax(0,15rem) minmax(0,5fr) minmax(0,0rem);
+    padding-left: 10px;
+    padding-right: 10px;
 }
-.footer {
-    min-height: 100px;
-    border-top: solid 1px #cdcdcd;
+.contentpaginas {
+    max-width: 1440px;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: minmax(0,15rem) minmax(0,5fr) minmax(0,15rem);
+    padding-left: 10px;
+    padding-right: 10px;
 }
-.anchors {
-    border-left: solid 1px #cdcdcd;
-    padding-left: 15px;
+
+.contentsujestao{
+    max-width: 1440px;
+    margin-top: 32px;
+    margin-bottom: 0px;
+    display: grid;
+    grid-template-columns: minmax(0,15rem) minmax(0,15fr) minmax(0,15rem);
+    padding-left: 10px;
+    padding-right: 10px;
 }
-.sidebar {
-    border-right: solid 1px #cdcdcd;
-}
-figure {
+
+.inicio {
+    border-right: solid 3px #0647a86b;
     text-align: center;
+    padding:5px 10px;
+    background-color: #5555552a;
+    color: #032353b9;
+    margin-top: 10px;
+    margin-left: 700px;
+    border-radius: 10px 10px 0px;
+}
+
+.inicio:hover{
+    background-color:#0647a86b;
     
 }
+
+.anchors {
+    width: 65%;
+    margin-top: 5px;
+}
+
+.anchors {
+    position: fixed;      /* 🔒 fixa na tela */
+    top: 5px;           /* distância do topo */
+    right: 60px;          /* cola no lado direito */
+    width: 200px;         /* largura fixa */
+}
+
+
+.anchors ul {
+    list-style: none;     /* tira bolinhas */
+}
+
+.anchors li {
+    margin-bottom: 0.5rem;
+    text-align: center;
+    margin-top: 20px;
+    
+}
+
+.anchors li a {
+    display: block;              /* faz o link ocupar tudo */
+    width: 100%;                 /* mesma largura para todos */
+    padding: 5px 20px;
+    background-color: #5555552a;
+    color: #032353b9;
+    text-decoration: none;
+    border-radius: 0px 10px 10px;
+    border-left: solid 3px #0647a86b;
+    transition: background-color 0.3s ease;
+}
+
+.anchors li a:hover {
+    background-color: #f9f9fb;
+}
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 79vh;
+  margin-left: 30px;
+}
+
+.sidebarpaginas{
+    position: fixed;
+    top: 0;
+    left: 450px; 
+}
+
+.sidebar ul li a {
+    display: block;        /* ocupa a linha inteira */
+}
+.sidebar li {
+    border-left: solid 3px #0647a86b;
+    text-align: center;
+    padding:5px;
+    background-color: #5555552a;
+    color: #f9f9fb;
+    margin-top: 10px;
+    border-radius: 0px 10px 10px;
+}
+
+.sidebar li:hover{
+    background-color: #f6f8fa50;
+}
+.sidebar img{
+     margin-left: 10px;
+     margin-bottom: 0;
+     margin-top: 0;
+}
+
+.sujestoes{
+    display: flex;
+    justify-content: center;
+}
+
+.sujestoes:hover img{
+  transform: scale(1.1);
+  filter: brightness(1.5);
+}
+
+figure {
+    text-align: center;
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
     /* Fundo */
-    background-image: url('../images/fundo\ 1.jpg'); /* caminho relativo da página index.html */
+    background-image: url('../images/ChatGPT\ Image\ 26\ de\ jan.\ de\ 2026\,\ 20_22_09.png'); /* caminho relativo da página index.html */
     background-size: cover;       /* a imagem cobre toda a tela */
     background-position: center;  /* centraliza a imagem */
     background-repeat: no-repeat; /* evita repetição */
     background-attachment: fixed; /* fixa a imagem ao rolar a página */
 }
-.main {
-    background-color: rgba(255, 254, 254, 0.705); /* fundo branco semi-transparente */
+
+.mainpaginas {
+    background-color: rgba(126, 125, 131, 0.13); /* fundo branco semi-transparente */
     padding: 30px; /* espaço interno */
-    border-radius: 20px; /* cantos arredondados (opcional) */
+    border-radius: 10px; /* cantos arredondados (opcional) */
     max-width: 750px; /* largura máxima */
     margin: 20px auto; /* centraliza horizontalmente */
 }
+
 .mainindex {
-    background-color: #f9f9fb6b;
-    padding: 20px; /* espaço interno */
-    border-radius: 20px; /* cantos arredondados (opcional) */
-    max-width: 750px; /* largura máxima */
-    height: 80vh; /* altura igual à da tela */
-    margin: 5px auto; /* centraliza horizontalmente */
+    margin-top: 0;
+    padding: 5px; /* espaço interno */
+    max-width: 850px; /* largura máxima */
+    height: 73vh; /* altura igual à da tela */
+    margin: 0px auto; /* centraliza horizontalmente */
+    
 }
 
-img {
-    border-radius: 20px; /* Ajuste o valor para mais ou menos arredondamento */
+.mainindex h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+.mainindex p{
+    font-size: 18px
+}
+
+
+.galeria {
+    display: flex;
+    list-style: none; /* tira as bolinhas */
+    gap: 30px; /* espaço entre as imagens */
+    flex-wrap: wrap;
+}
+
+.galeria img {
+    border-radius: 15px;
+    width: 260px; /* ajuste como quiser */
+}
+
+.galeria li img {
+  transition: transform 0.8s ease, filter 0.8s ease;
+}
+
+.galeria li:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.3);
+}
+
+
+.logo-serie {
+ width: 100%;
+ border-radius: 10px;
+ transition: transform 0.8s ease, filter 0.8s ease;
+ filter: brightness(1.1);
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 40px auto;   /* centraliza */
+  padding-top: 56.25%; /* proporção 16:9 */
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px; /* combina com o resto do layout */
 }
 
 .footer {
-  background-color: #f9f9fb6b; /* fundo escuro */
-  color: #0c0000;            /* texto branco */
+  background-color: #0a0a0a15; /* fundo escuro */
+  color: #0c0000;            /* texto preto */
   text-align: center;     /* centraliza o texto */
   padding: 1px;
-  margin-top: 1px;
+  margin-top: 71px;
   border-radius:90px 90px 0 0; /* cantos arredondados em cima */
 }
-
 
 /* Container da nota IMDb */
 .imdb-rating {
     display: inline-block;
-    background-color: #f5c518; /* cor amarela do IMDb */
+    background-color: #e5b507; /* cor amarela do IMDb */
     color: #000;
     font-weight: bold;
     padding: 5px 10px;
@@ -92,7 +256,7 @@ img {
 }
 
 /* Texto "IMDb" em destaque */
-.imdb-rating span {
+.imdb-rating, span {
     font-weight: normal;
     margin-left: 5px;
     color: #000;
@@ -100,9 +264,35 @@ img {
 
 /* Pequeno efeito ao passar o mouse */
 .imdb-rating:hover {
-    background-color: #e5b507;
+    background-color: #fccd25;
     cursor: default;
 }
+
+/* Container da nota IMDb */
+.gender {
+    display: inline-block;
+    background-color: #034275a1; /* cor amarela do IMDb */
+    color: #000;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 15px 0 15px 0;
+    font-size: 1em;
+    margin-top: 5px;
+}
+
+/* Texto "IMDb" em destaque */
+.gender, span {
+    font-weight: normal;
+    margin-left: 5px;
+    color: #000;
+}
+
+/* Pequeno efeito ao passar o mouse */
+.gender:hover {
+    background-color: #0570c7a1;;
+    cursor: default;
+}
+
 
 figcaption {
     font-size: 12px;  /* diminui o tamanho */
@@ -119,4 +309,59 @@ figure img:hover {
     transform: scale(1.05) translateY(-5px);
 }
 
+.form-container { 
+margin-top: 30px;
+  margin: auto;
+  background: #14469165;
+  padding: 15px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  color: #fff;
+  margin-bottom: 0px;
+}
 
+.form-container h1 {
+  text-align: center;
+  margin-bottom: 5px;
+  margin-top: 0px;
+}
+
+.form-container p{
+    color: #021463;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+label {
+  display: block;
+  margin-top: 0px;
+  font-size: 12px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  height: 42px;          /* força a mesma altura */
+  border-radius: 5px;
+  border: none;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  background: #0961e5;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #021463;
+}
